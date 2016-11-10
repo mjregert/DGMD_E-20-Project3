@@ -3,9 +3,6 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!--link rel="stylesheet" href="reset.css"-->
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="form.css">
         <title>Document</title>
@@ -19,38 +16,37 @@
                     <p>Create an account to play more games and compete at higher levels!</p>
                     <div>
                         <label for="email"><b>Email Address</b></label>
-                        <input id="email" type="email" aria-required="true">
+                        <input id="email" type="email" required placeholder="you@somewhere.com">
                         <span id="emailSuccess" hidden>&#10003;</span>
-                        <span id="emailFail" hidden>&#10005;</span>
                     </div>
                     <div>
                         <label for="dob"><b>Date of Birth</b></label>
-                        <input id="dob" type="date" aria-required="true">
-                        <i><small>(Must be 18 to create account)</small></i>
+                        <input id="dob" type="date" required aria-required="true" placeholder="Must be 18">
+                        <span id="dobSuccess" hidden>&#10003;</span>
                     </div>
                     <div>
-                        <label for="username"><b>Create a User Name</b>
-                            <input id="username" type="text" aria-required="true">
-                        </label>
+                        <label for="username"><b>Create a User Name</b></label>
+                        <input id="username" type="text" required aria-required="true">
+                        <span id="usernameSuccess" hidden>&#10003;</span>
                     </div>
                     <div>
-                        <label for="password"><b>Set a Password</b>
-                            <input id="password" type="password" aria-required="true">
-                        </label>
+                        <label for="password"><b>Set a Password</b></label>
+                        <input id="password" type="password" required aria-required="true">
+                        <span id="passwordSuccess" hidden>&#10003;</span>
                     </div>
                     <div>
-                        <label for="cpassword"><b>Confirm Password</b>
-                            <input id="cpassword" type="password" aria-required="true">
-                        </label>
-                    </div>
-                    <div>
-                        <input id="subscribe" type="checkbox" role="checkbox" aria-required="false">
-                        <label for="subscribe"><b>Subscribe to Newsletter</b></label>
-                        <i><small>(Email address will not be sold)</small></i>
+                        <label for="cpassword"><b>Confirm Password</b></label>
+                        <input id="cpassword" type="password" required aria-required="true">
+                        <span id="cpasswordSuccess" hidden>&#10003;</span>
                     </div>
                 </fieldset>
-                <fieldset id="genreFieldSet">
+                <div>
+                    <input id="subscribe" type="checkbox" role="checkbox" aria-required="false">
+                    <label for="subscribe"><b>Subscribe to Newsletter</b></label>
+                </div>
+                <fieldset id="genreFieldSet" hidden>
                     <legend>Game Genre Interests</legend>
+                    <p>Please select your gaming interests to customize the newsletter to your preferences!</p>
                     <div id="columns">
                         <div>
                             <input id="action" name="genre" type="checkbox" aria-required="false" role="checkbox" aria-checked="false">

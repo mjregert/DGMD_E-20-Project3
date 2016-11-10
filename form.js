@@ -1,30 +1,33 @@
 $(document).ready(function() {
 
+    // If the browser does not support the HTML5 "date" type of input, add a JQuery datepicker
     $( function() {
         if ($('#dob').prop('type') != 'date') {
             $( "#dob" ).datepicker();
         }
-    });
+    }); // end annyomous function for DPB picker
 
-    $('#email').focusout(function(){
-        if ($('#email').val().length == 0) {
-            $('#emailSuccess').addAttr('hidden');
-            $('#emailFail').removeAttr('hidden');
+    //------------------------------------------------------------------------//
+/*
+    $('#email').focusout(function() {
+        alert('FocusOutCalled');
+        // Add proper validation here
+        if (this.val().length == 0) {
+            alert('add');
         } else {
-            // validate here
-            $('#emailFail').addAttr('hidden');
-            $('#emailSuccess').removeAttr('hidden');
+            alert('remove');
         }
     });
-
+*/
+    //------------------------------------------------------------------------//
+    // Example of using a mouse click event
+    // Event handler for the subscribe checkbox
     $('#subscribe').click(function() {
-        //if (this.checked) {
-            $('#genreFieldSet').animate({
-                opacity: 1,
-                hidden: hidden
-            },200, 'swing');
-        //} else {
-        //}
+        if (this.checked) {
+            $('#genreFieldSet').show(500);
+        } else {
+            $('#genreFieldSet').hide(500);
+        }
     });
 
     $('#dob').change(function() {
