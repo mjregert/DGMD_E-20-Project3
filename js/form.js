@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+    var avatars = ["img/avatar1.png","img/avatar2.png","img/avatar3.png","img/avatar4.png","img/avatar5.png","img/avatar6.png"];
+    var selectedAvatar = 0;
+
     // If the browser does not support the HTML5 "date" type of input, add a JQuery datepicker
     $( function() {
         if ($('#dob').prop('type') != 'date') {
@@ -18,29 +21,46 @@ $(document).ready(function() {
         }
     });
 
-    $('#dob').change(function() {
-        // Validate that the date was put in correctly
-        if($('#dob').val().length == 0) {
-            $('label[for="dob"]').html('Please enter a valid date.');
-        } else {
-/*
-        // We need to know if the data coming in is a DATE object or a STRING
-        var dob = $('#dob').val();
-
-        if ($('#dob').prop('type') == 'date') {
-            var year = dob.substring(0,4);
-            alert('DATE!' + year);
-        } else {
-            var date2 = date(dob);
-            alert('STRING!' + dob);
-*/
-        }
+    $('#dob').focus(function() {
     });
 
 
     $('#submit').click(function() {
-        alert("submit clicked");
+        alert("Account created!");
     }); // End submit click
+
+    $('#leftArrow').hover(function() {
+        $( this ).css({'opacity' : '1.0'});
+    }, function() {
+        $( this ).css({'opacity' : '0.4'});
+    });
+
+    $('#rightArrow').hover(function() {
+        $( this ).css({'opacity' : '1.0'});
+    }, function() {
+        $( this ).css({'opacity' : '0.4'});
+    });
+
+    $('#leftArrow').click(function() {
+        selectedAvatar--;
+        if (selectedAvatar == -1) {
+            selectedAvatar = avatars.length -1;
+        }
+        $('#avatarImg').attr('src',avatars[selectedAvatar]);
+    });
+
+    $('#rightArrow').click(function() {
+        selectedAvatar++;
+        if (selectedAvatar == avatars.length) {
+            selectedAvatar = 0;
+        }
+        $('#avatarImg').attr('src',avatars[selectedAvatar]);
+    });
+
+    $('#reset').click(function() {
+        selectedAvatar = 0;
+        $('#avatarImg').attr('src',avatars[selectedAvatar]);
+    });
 
 
 }); // End ready

@@ -26,38 +26,45 @@
             <form action="">
                 <fieldset>
                     <legend>Personal Information</legend>
-                    <div>
-                        <label for="email"><b>Email Address</b></label>
-                        <input id="email" type="email" required placeholder="you@somewhere.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-                        <span id="emailSuccess" hidden>&#10003;</span>
+                    <div id="personalInfo">
+                        <div>
+                            <label for="email"><b>Email Address</b></label>
+                            <input id="email" type="email" required placeholder="you@somewhere.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                        </div>
+                        <div>
+                            <label for="age"><b>Age</b></label>
+                            <input id="age" type="number" aria-required="true">
+                        </div>
+                        <div>
+                            <label for="username"><b>Create a User Name</b></label>
+                            <input id="username" type="text" required aria-required="true">
+                        </div>
+                        <div>
+                            <label for="password"><b>Set a Password</b></label>
+                            <input id="password" type="password" required aria-required="true">
+                        </div>
+                        <div>
+                            <label for="cpassword"><b>Confirm Password</b></label>
+                            <input id="cpassword" type="password" required aria-required="true">
+                        </div>
                     </div>
-                    <div>
-                        <label for="dob"><b>Date of Birth</b></label>
-                        <input id="dob" type="date" required aria-required="true" placeholder="Must be 18">
-                        <span id="dobSuccess" hidden>&#10003;</span>
-                    </div>
-                    <div>
-                        <label for="username"><b>Create a User Name</b></label>
-                        <input id="username" type="text" required aria-required="true">
-                        <span id="usernameSuccess" hidden>&#10003;</span>
-                    </div>
-                    <div>
-                        <label for="password"><b>Set a Password</b></label>
-                        <input id="password" type="password" required aria-required="true">
-                        <span id="passwordSuccess" hidden>&#10003;</span>
-                    </div>
-                    <div>
-                        <label for="cpassword"><b>Confirm Password</b></label>
-                        <input id="cpassword" type="password" required aria-required="true">
-                        <span id="cpasswordSuccess" hidden>&#10003;</span>
+                    <div id="avatar">
+                        <h2>Select an Avatar</h2>
+                        <img id="leftArrow" src="img/Actions-go-previous-icon.png" alt="Previous" class="arrow" />
+                        <img id="avatarImg" src="img/avatar1.png" alt="Avatar" />
+                        <img id="rightArrow" src="img/Actions-go-next-icon.png" alt="Next" class="arrow" />
                     </div>
                 </fieldset>
-                <div>
+                <div id="newsletter">
                     <input id="subscribe" type="checkbox" role="checkbox" aria-required="false">
                     <label for="subscribe"><b>Subscribe to Newsletter</b></label>
                 </div>
                 <fieldset id="genreFieldSet" hidden>
-                    <legend>Game Genre Interests</legend>
+                    <legend>Newsletter Preferences</legend>
+                    <div>
+                        <label for="dob"><b>Join our Birthday Club</b></label>
+                        <input id="dob" type="date" aria-required="false" placeholder="Must be 18">
+                    </div>
                     <p>Please select your gaming interests to customize the newsletter to your preferences!</p>
                     <div id="columns">
                         <div>

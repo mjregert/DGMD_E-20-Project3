@@ -113,5 +113,30 @@ li a {
     padding: 1em;
     color: white;
     font-size: 1.5em;
+}
 
+#personalInfo, #avatar {
+    float: left;
+}
+
+#newsletter {
+    clear: both;
+}
+
+#avatar {
+    margin-left: 3em;
+}
+
+#avatar h2 {
+    margin: 0;
+}
+
+#avatar img {
+    width: 150px;
+    height: 150px;
+}
+#avatar img.arrow {
+    width: 50px;
+    height: 50px;
+    opacity: 0.4;
 }
