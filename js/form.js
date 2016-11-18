@@ -11,8 +11,7 @@ $(document).ready(function() {
     }); // end annyomous function for DPB picker
 
     //------------------------------------------------------------------------//
-    // Example of using a mouse click event
-    // Event handler for the subscribe checkbox
+    // Click event handler for the subscribe checkbox
     $('#subscribe').click(function() {
         if (this.checked) {
             $('#genreFieldSet').show(500);
@@ -21,14 +20,14 @@ $(document).ready(function() {
         }
     });
 
-    $('#dob').focus(function() {
-    });
-
-
+    //------------------------------------------------------------------------//
+    // Click event handler for the submit checkbox
     $('#submit').click(function() {
         alert("Account created!");
     }); // End submit click
 
+    //------------------------------------------------------------------------//
+    // Hover event handlers for the arrows
     $('#leftArrow').hover(function() {
         $( this ).css({'opacity' : '1.0'});
     }, function() {
@@ -41,6 +40,8 @@ $(document).ready(function() {
         $( this ).css({'opacity' : '0.4'});
     });
 
+    //------------------------------------------------------------------------//
+    // Click event handlers for the arrows
     $('#leftArrow').click(function() {
         selectedAvatar--;
         if (selectedAvatar == -1) {
@@ -57,10 +58,11 @@ $(document).ready(function() {
         $('#avatarImg').attr('src',avatars[selectedAvatar]);
     });
 
+    //------------------------------------------------------------------------//
+    // Click event for the reset button
     $('#reset').click(function() {
         selectedAvatar = 0;
         $('#avatarImg').attr('src',avatars[selectedAvatar]);
     });
-
 
 }); // End ready
