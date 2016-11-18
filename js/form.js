@@ -42,20 +42,30 @@ $(document).ready(function() {
 
     //------------------------------------------------------------------------//
     // Click event handlers for the arrows
-    $('#leftArrow').click(function() {
+    $('.arrow').first().click(function() {
         selectedAvatar--;
         if (selectedAvatar == -1) {
             selectedAvatar = avatars.length -1;
         }
-        $('#avatarImg').attr('src',avatars[selectedAvatar]);
+        $('#avatarImg').fadeOut( "slow", function() {
+            $('#avatarImg').attr('src',avatars[selectedAvatar]);
+            $('#avatarImg').fadeIn( "slow", function() {
+             //Done
+            });
+        });
     });
 
-    $('#rightArrow').click(function() {
+    $('.arrow').last().click(function() {
         selectedAvatar++;
         if (selectedAvatar == avatars.length) {
             selectedAvatar = 0;
         }
-        $('#avatarImg').attr('src',avatars[selectedAvatar]);
+        $('#avatarImg').fadeOut( "slow", function() {
+            $('#avatarImg').attr('src',avatars[selectedAvatar]);
+            $('#avatarImg').fadeIn( "slow", function() {
+             //Done
+            });
+        });
     });
 
     //------------------------------------------------------------------------//
