@@ -4,19 +4,31 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="form.css">
+        <link rel="stylesheet" href="css/styles.css">
         <title>Document</title>
     </head>
 
     <body>
-        <div id=formContainer>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Play snowman game</a></li>
+                    <li><a href="form.html">Sign up for more games</a></li>
+                </ul>
+            </nav>
+            <h1>Account Creation</h1>
+            <p>Create an account to play more games and compete at higher levels!</p>
+        </header>
+
+
+
+        <div id="formContainer">
             <form action="">
                 <fieldset>
-                    <legend>Account Creation</legend>
-                    <p>Create an account to play more games and compete at higher levels!</p>
+                    <legend>Personal Information</legend>
                     <div>
                         <label for="email"><b>Email Address</b></label>
-                        <input id="email" type="email" required placeholder="you@somewhere.com">
+                        <input id="email" type="email" required placeholder="you@somewhere.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                         <span id="emailSuccess" hidden>&#10003;</span>
                     </div>
                     <div>
@@ -108,7 +120,7 @@
         <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous"></script>
 
-        <script src="form.js"></script>
+        <script src="js/form.js"></script>
 
 
 

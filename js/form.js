@@ -8,18 +8,6 @@ $(document).ready(function() {
     }); // end annyomous function for DPB picker
 
     //------------------------------------------------------------------------//
-/*
-    $('#email').focusout(function() {
-        alert('FocusOutCalled');
-        // Add proper validation here
-        if (this.val().length == 0) {
-            alert('add');
-        } else {
-            alert('remove');
-        }
-    });
-*/
-    //------------------------------------------------------------------------//
     // Example of using a mouse click event
     // Event handler for the subscribe checkbox
     $('#subscribe').click(function() {
